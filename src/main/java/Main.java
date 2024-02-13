@@ -61,8 +61,7 @@ public class Main {
     private static ArrayList<Integer> loadingNumbersToList(Scanner scanner) {
         ArrayList<Integer> numbers = new ArrayList<>();
         boolean positive = true;
-        System.out.println("Podaj liczbe dodatnia");
-        while (positive) {
+        do {
             int number = scanner.nextInt();
             if (number < 0) {
                 System.out.println("Koniec programu, miales wpisywac liczby dodatnie");
@@ -71,7 +70,7 @@ public class Main {
                 System.out.println("Podaj liczbe dodatnia");
                 numbers.add(number);
             }
-        }
+        } while (positive);
         return numbers;
     }
 }
